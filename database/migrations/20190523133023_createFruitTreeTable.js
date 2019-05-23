@@ -8,8 +8,8 @@ exports.up = function(knex, Promise) {
       .notNullable()
       .unique();
 
-    trees.string('password', 128).notNullable();
-    trees.string('type', 48).notNullable();
+    trees.string('password', 128)
+    trees.string('type', 48)
   })
 };
 
