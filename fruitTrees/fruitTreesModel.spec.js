@@ -34,6 +34,16 @@ describe('trees model', () => {
       expect(trees).toHaveLength(2)
     })
 
+    //another way to do the same thing
+
+    it('should insert the provided hobbits into the db', async () => {
+      let tree = await Trees.insert({ treename: 'flower' });
+      expect(tree.treename).toBe('flower');
+
+      tree = await Trees.insert({ treename: 'sam' });
+      expect(tree.treename).toBe('sam');
+    })
+
 
 
 
